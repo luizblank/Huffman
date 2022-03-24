@@ -27,6 +27,7 @@ for i in range(c):
     atribuicoes.append(a[indice])
     atribuicoes.append(repeticoes[indice])
     indice = indice + 1
-    
-for i in range(c):
-    
+
+for i in range(len(atribuicoes)):
+    if (i%2) != 0:
+        print(bin(atribuicoes[i]))
