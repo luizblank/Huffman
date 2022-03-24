@@ -10,7 +10,7 @@ repeticoes = []
 atribuicoes = {}
 
 a = set(lista)
-
+a = list(a)
 
 for i in a:
     b = lista.count(i)
