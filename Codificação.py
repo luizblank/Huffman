@@ -7,7 +7,7 @@ This is a temporary script file.
 
 lista = [4,4,4,4,4,4,6,8,8,8,7]
 repeticoes = []
-atribuicoes = {}
+atribuicoes = []
 
 a = set(lista)
 a = list(a)
@@ -18,6 +18,15 @@ for i in a:
     
 c = len(repeticoes)
 
+# for i in range(c):
+#     atribuicoes[a[i]] = repeticoes[i]
+
+indice = 0
+    
 for i in range(c):
-    atribuicoes[a[i]] = repeticoes[i]
+    atribuicoes.append(a[indice])
+    atribuicoes.append(repeticoes[indice])
+    indice = indice + 1
+    
+for i in range(c):
     
