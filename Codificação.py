@@ -5,11 +5,13 @@ Spyder Editor
 This is a temporary script file.
 """
 
-lista = [4,4,4,4,4,4,6,8,8,8,7]
+lista = [7,7,7,3,6,2,2,2,2,2,2,5,5,5,4,9,8,1]
 repeticoes = []
 atribuicoes = []
+atribuicoes1 = []
 cod = []
 cod_certo=[]
+lista_correta = []
 
 a = set(lista)
 a = list(a)
@@ -39,6 +41,8 @@ for i in cod:
 for i in range(c):
     atribuicoes.append(a[indice])
     atribuicoes.append(repeticoes[indice])
+    atribuicoes1.append(a[indice])
+    atribuicoes1.append(repeticoes[indice])
     indice = indice + 1
 
 lista2 = []
@@ -53,8 +57,16 @@ def apagar():
     mm.pop(indice2)
     return p
 
+tamanho1 = len(atribuicoes)
 indice3 = 0
-for i in atribuicoes:
-    j = atribuicoes.index(apagar())-1
-    atribuicoes[j] = int(cod_certo[indice3])
+for i in mm:
+    j = atribuicoes.index(apagar())
+    z = atribuicoes[j]
+    x = int(cod_certo[indice3])
     indice3 = indice3 + 1
+    lista_correta.append(x)
+    lista_correta.append(z)
+    atribuicoes.pop(j)
+    atribuicoes.pop(j-1)
+    
+print(lista_correta)
